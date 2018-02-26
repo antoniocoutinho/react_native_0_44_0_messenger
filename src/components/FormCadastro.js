@@ -4,15 +4,14 @@ import { connect } from 'react-redux';
 import {modificaEmail, modificaSenha} from '../actions/AutenticacaoActions'
 
 const formCadastro = props => {
-    console.log(props);
-    
+    console.log(props); 
     return (
         <Image style={{ flex: 1, width: null }} source={require('../imgs/bg.png')}>
             <View style={{ flex: 1, padding: 10 }}>
                 <View style={{ flex: 4, justifyContent: 'center' }}>
-                    <TextInput value={props.nome} placeholder="Nome" style={{ fontSize: 20, height: 45 }} />
-                    <TextInput value={props.email} placeholder="E-mail" style={{ fontSize: 20, height: 45 }} onChangeText={texto => props.modificaEmail(texto) } />
-                    <TextInput secureTextEntry value={props.senha} placeholder="Senha" style={{ fontSize: 20, height: 45 }} onChangeText={texto => props.modificaSenha(texto) } />
+                    <TextInput value={props.nome} placeholder="Nome"  placeholderTextColor='white' style={{ fontSize: 20, height: 45,  color:'white' }} />
+                    <TextInput value={props.email} placeholder="E-mail"  placeholderTextColor='white' style={{ fontSize: 20, height: 45,  color:'white'}} onChangeText={texto => props.modificaEmail(texto) } />
+                    <TextInput secureTextEntry value={props.senha} placeholder="Senha"  placeholderTextColor='white' style={{ fontSize: 20, height: 45 }} onChangeText={texto => props.modificaSenha(texto) } />
                 </View>
                 <View style={{ flex: 1 }}>
                     <Button title="Cadastrar" color="#115E54" onPress={() => false} />

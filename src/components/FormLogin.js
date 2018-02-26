@@ -10,13 +10,13 @@ const formLogin = props => {
         <Image style={{ flex: 1, width: null }} source={require('../imgs/bg.png')}>
             <View style={{ flex: 1, padding: 10 }}>
                 <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-                    <Text style={{ fontSize: 25 }}>WhatsApp Clone</Text>
+                    <Text style={{ fontSize: 25, color:'white'  }}>WhatsApp Clone</Text>
                 </View>
                 <View style={{ flex: 2}}>
-                    <TextInput value={props.email} style={{ fontSize: 20, height: 45 }} placeholder='E-mail' onChangeText={texto => props.modificaEmail(texto) } />
-                    <TextInput secureTextEntry value={props.senha} style={{ fontSize: 20, height: 45 }} placeholder='Senha' onChangeText={texto => props.modificaSenha(texto) } />
+                    <TextInput value={props.email} style={{ fontSize: 20, height: 45, color:'white' }} placeholder='E-mail' placeholderTextColor='white' onChangeText={texto => props.modificaEmail(texto) } />
+                    <TextInput secureTextEntry value={props.senha} style={{ fontSize: 20, height: 45, color:'white'  }} placeholderTextColor='white' placeholder='Senha' placeholderTextColor='white' onChangeText={texto => props.modificaSenha(texto) } />
                     <TouchableHighlight onPress={() => Actions.formCadastro() }>
-                        <Text style={{ fontSize: 20 }}>Ainda não tem cadastro? Cadastre-se</Text>
+                        <Text style={{ fontSize: 20 , color:'white' }}>Ainda não tem cadastro? Cadastre-se</Text>
                     </TouchableHighlight>
                 </View>
                 <View style={{ flex: 2}}>
